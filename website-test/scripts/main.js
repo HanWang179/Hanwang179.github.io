@@ -1,5 +1,6 @@
 const myImage = document.querySelector("img");
 let counter = 0;
+const counterText = document.querySelector("#click-counter");
 let tolerance = 0;
 myImage.onclick = () => {
   const mySrc = myImage.getAttribute("src");
