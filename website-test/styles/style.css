@@ -38,3 +38,15 @@ img {
   display: block;
   margin: 0 auto;
 }
+#click-counter {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+
+  padding: 8px 12px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 6px;
+
+  font-family: "Open Sans", sans-serif;
+}

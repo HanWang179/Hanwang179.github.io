@@ -1,5 +1,6 @@
 const myImage = document.querySelector("img");
 let counter = 0;
+const counterText = document.querySelector("#click-counter");
 let tolerance = 0;
 myImage.onclick = () => {
   const mySrc = myImage.getAttribute("src");
@@ -25,30 +26,8 @@ function setUserName() {
         );
       }
     } else if (tolerance >= 30) {
-      document.body.style.pointerEvents = "none";
-
-      const overlay = document.createElement("div");
-
-      overlay.textContent = "点太多了，正在强制跳转……";
-
-      overlay.style.position = "fixed";
-      overlay.style.top = "0";
-      overlay.style.left = "0";
-      overlay.style.width = "100%";
-      overlay.style.height = "100%";
-      overlay.style.background = "black";
-      overlay.style.color = "white";
-      overlay.style.display = "flex";
-      overlay.style.justifyContent = "center";
-      overlay.style.alignItems = "center";
-      overlay.style.fontSize = "40px";
-      overlay.style.zIndex = "9999";
-
-      document.body.appendChild(overlay);
       alert("知错不改，真是可恶！去见江师去吧！");
-      setTimeout(() => {
-        window.location.replace("https://diglogic.p.cs-lab.top/#1");
-      }, 2000);
+      window.location.replace("https://diglogic.p.cs-lab.top/#1");
     }
     setUserName();
   }
