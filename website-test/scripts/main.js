@@ -16,7 +16,7 @@ function setUserName() {
   if (!myName) {
     alert("你干嘛");
     tolerance++;
-    if (tolerance >= 15 || tolerance < 30) {
+    if (tolerance >= 15 && tolerance < 30) {
       let choice = confirm("别惹我");
       if (!choice) {
         alert("看来你需要一点惩罚了！");
@@ -60,6 +60,7 @@ myButton.onclick = function () {
 myImage.addEventListener("click", () => {
   counter++;
   alert(`别摸我！你已经点击了 ${counter} 次`);
+  counterText.textContent = `Clicks: ${counter}`;
   if (counter >= 50) {
     const answer = confirm("你点太多了！确定要继续吗？");
     if (answer) {
